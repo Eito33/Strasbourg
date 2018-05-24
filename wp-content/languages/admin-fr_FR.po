@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 4.9.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-05-21 15:39:58+0000\n"
+"PO-Revision-Date: 2018-05-23 09:43:24+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -625,7 +625,7 @@ msgstr "Télécharger à nouveau les données personnelles"
 
 #: wp-admin/includes/file.php:2169
 msgid "Invalid request ID when merging exporter data."
-msgstr "ID non valide lors de la fusion des données d’export"
+msgstr "ID non valide lors de la fusion des données d’export."
 
 #: wp-admin/includes/file.php:2124
 msgid "Unable to send personal data export email."
@@ -641,7 +641,7 @@ msgstr "ID non valide lors de l’envoi par e-mail des données d’export."
 
 #: wp-admin/includes/file.php:2037
 msgid "Unable to open export file (archive) for writing."
-msgstr "Impossible d’ouvrir le fichier (archive) d’export en écriture"
+msgstr "Impossible d’ouvrir le fichier (archive) d’export en écriture."
 
 #: wp-admin/includes/file.php:1947
 msgid "Personal Data Export"

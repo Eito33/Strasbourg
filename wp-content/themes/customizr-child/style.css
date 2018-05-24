@@ -26,58 +26,118 @@
 
 
 
+/**** BODY ****/
+#main-wrapper{
+    margin-top: 150px;
+}
+
 
 /**** HEADER ****/
-
-header{
-    position: fixed !important;
-    width: 100% !important;
-    height: auto !important;
+.tpnav-header__header{
+    position: fixed;
+    width: 100%;
+    height: auto;
 }
 
 
 /**** PRIMARY MENU ****/
-
-#primary-nav>li>a{
-    font-size: 0.8em !important; 
+a.nav__link{
+    font-size: 0.8em;
+    letter-spacing: 0;
 }
-
-#primary-nav>li>a{
-    letter-spacing: 0 !important;
-}
-
-#primary-nav>li>a:hover{
+a.nav__link:hover{
     color: #45cdbe !important;
 }
 
 /* btn search */
 a.search-toggle_btn.icn-search.czr-overlay-toggle_btn{
-    color: #45cdbe !important;
+    color: #45cdbe;
 }
 
-.navbar-brand-sitename{
-    color: #45cdbe !important;
+/* Logo vert */
+a.navbar-brand-sitename.czr-underline{
+    color: #45cdbe;
 }
-
 
 
 /**** CONTAINER MARKETING ****/
-
-.fp-title{
-    color: #45cdbe !important;
+h4.fp-title{
+    color: #45cdbe;
 }
-
-
-
 
 
 /**** FOOTER ****/
-
 .footer__wrapper .widget>h5{
-    color: #45cdbe !important;
-    font-weight: bold !important;
+    color: #45cdbe;
+    font-weight: bold;
 }
 
 .colophon__row .footer__credits p{
-    color: #45cdbe !important; 
+    color: #45cdbe; 
 }
+
+
+
+/**** ALL PAGE ***/
+h1.archive-title{
+    display: none !important;
+}
+
+/* Require on form */
+.red_require{
+    color: red;
+}
+
+/* SIDE BAR LEFT */
+.tc-sidebar.left{
+    display: none;
+}
+
+
+/* EVENT */
+.events-table>tbody>tr:hover{
+    background-color: rgba(76, 207, 192, 0.3);
+}
+
+
+
+/* Contact textarea */
+label{
+    width: 100%;
+}
+textarea.wpcf7-form-control.wpcf7-textarea.wpcf7-validates-as-required.czr-focusable{
+    width: 100%;
+}
+
+
+
+
+/**** MOBILE ****/
+@media screen and (max-device-width: 425px)
+    {
+        /**** EVENT MANAGER ****/
+       th{ display: none; }
+       tr{ display: flex; flex-direction: column; }
+       td{ display: flex; flex-direction: column; }
+
+    }
+
+
+
+/* PROBLEME SUR =>
+
+La page d'un event en mobile/tablette on a une marge a droite cela vient de header
+
+Page accueil avec le slider sur mobile on a un soucis
+
+Le header fait un mouvement bizarre en mobile et tablette
+
+
+Il manque a réaliser integrer tous le contenu.
+
+Voir si il y a des petites retouches a faire
+
+Integrer => Le site doit avoir été optimisé pour le référencement naturel et doit suivre les bonnes pratiques d'accessibilité (WCAG 2.0 niveau A).
+
+
+*/
