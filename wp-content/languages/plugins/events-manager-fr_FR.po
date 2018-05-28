@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Events Manager - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-05-24 04:23:38+0000\n"
+"PO-Revision-Date: 2018-05-25 08:54:22+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,6 +19,122 @@ msgstr "Langue de la réservation"
 msgid "The language used to make this booking was %s"
 msgstr "La langue utilisée pour faire cette réservation était le %s"
 
+#: em-install.php:1083
+msgid "Events Manager has introduced new privacy tools to help you comply with international laws such as the GDPR, <a href=\"%s\">see our documentation</a> for more information."
+msgstr "Events Manager ajoute des nouveaux outils pour la gestion de la confidentialité afin de vous aidez à être conforme aux lois internationales comme la RGPD, <a href=\"%s\">voir notre documentation</a> pour plus d’informations."
+
+#: em-install.php:828
+msgid "I consent to my submitted data being collected and stored as outlined by the site %s."
+msgstr "Je consent à ce que mes données fournies soient recueillies et stockées comme décrit par le site %s. "
+
+#: em-data-privacy.php:150
+msgid "Please check the consent box so we can collect and store your submitted information."
+msgstr "Merci de cocher la case d’acceptation pour que nous puissions collecter et stocker les données que vous nous fournissez."
+
+#: em-data-privacy.php:96
+msgid "You must allow us to collect and store your data in order for us to process your booking."
+msgstr "Vous devez nous autoriser à recueillir et stocker vos informations afin que nous puissions gérer votre réservation. "
+
+#: admin/em-options.php:989
+msgid "Bookings Forms"
+msgstr "Formulaire de réservation"
+
+#: admin/em-options.php:988
+msgid "Location Submission Forms"
+msgstr "Formulaire pour un emplacement"
+
+#: admin/em-options.php:986
+msgid "You can hide or leave the consent box checked for registered users who have provided consent previously."
+msgstr "Vous pouvez cacher ou laisser la case cochée pour le consentement des utilisateurs enregistrés et qui ont déjà donné leur consentement lors d’une visite précédente.. "
+
+#: admin/em-options.php:986
+msgid "Remembering Consent"
+msgstr "Se souvenir du consentement"
+
+#: admin/em-options.php:985
+msgid "%s will be replaced by a link to your site privacy policy page."
+msgstr "%s sera remplacé par un lien vers une page de votre site décrivant votre politique de confidentialité."
+
+#: admin/em-options.php:985
+msgid "Consent Text"
+msgstr "Texte pour le consentement"
+
+#: admin/em-options.php:983
+msgid "Remember and show checkbox"
+msgstr "Mémoriser et afficher la case à cocher"
+
+#: admin/em-options.php:982
+msgid "Remember and hide checkbox"
+msgstr "Mémoriser et cacher la case à cocher"
+
+#: admin/em-options.php:981
+msgid "Always show and ask for consent"
+msgstr "Toujours afficher et demander le consentement"
+
+#: admin/em-options.php:978
+msgid "Only show to guests"
+msgstr "Afficher seulement aux invités"
+
+#: admin/em-options.php:977
+msgid "Show to all"
+msgstr "Afficher à tout le monde"
+
+#: admin/em-options.php:976
+msgid "Do not show"
+msgstr "Ne pas montrer"
+
+#: admin/em-options.php:970
+msgid "If you collect personal data, you may want to request their consent. The options below will automatically add checkboxes requesting this consent."
+msgstr "Si vous demandez des informations personnelles, vous pouvez vouloir demander leur consentement aux utilisateurs. Ces options ci-dessous vont ajouter automatiquement des cases à cocher pour demander ce consentement."
+
+#: admin/em-options.php:969
+msgid "Consent"
+msgstr "Consentement"
+
+#: admin/em-options.php:958
+msgid "Erase Personal Data"
+msgstr "Supprimer les informations personnelles"
+
+#: admin/em-options.php:954 admin/em-options.php:964
+msgid "This is specific to bookings made by the user, not bookings that may have been made to events they own."
+msgstr "C’est limité aux réservations faites par l’utilisateur, pas aux réservations qu’il a pu faire sur ses propres évènements."
+
+#: admin/em-options.php:953 admin/em-options.php:963
+msgid "Locations submitted by guest users are not included, unless they are linked to events also submitted by them."
+msgstr "Les emplacements fournis pas les invités ne sont pas inclus, sauf s’ils sont liés à des évènements aussi soumis par eux."
+
+#: admin/em-options.php:948
+msgid "Export Personal Data"
+msgstr "Extraire les données personnelles"
+
+#: admin/em-options.php:944
+msgid "All options below relate to data that may have been submitted by or collected from the user requesting their personal data, which would also include events and locations where they are the author."
+msgstr "Toutes les options ci-dessous sont en relation avec les données qui ont pu être fournies ou recueillies sur les utilisateurs et qui souhaitent récupérer leurs données personnelles. Cela inclut les évènements et les emplacements dont ils sont les auteurs."
+
+#: admin/em-options.php:943
+msgid "For more information see our <a href=\"%s\">data privacy documentation</a>."
+msgstr "Pour plus d’information, merci de consulter notre <a href=\"%s\">documentation sur les données personnelles</a>."
+
+#: admin/em-options.php:942
+msgid "Depending on the nature of your site, you will be subject to one or more national and international privacy/data protection laws such as the %s. Below are some options that you can use to tailor how Events Manager interacts with WordPress privacy tools."
+msgstr "En fonction de votre site, vous pouvez être soumis à une ou plusieurs lois nationales ou internationales sur la gestion des données personnelles et la confidentialité comme %s. Ci-dessous, vous trouverez des options que vous pouvez utiliser pour définir comment Events Manager inter-agit avec les options de confidentialité de WordPress."
+
+#: admin/em-options.php:940
+msgid "Privacy"
+msgstr "Confidentialité"
+
+#: admin/em-options.php:936
+msgid "Include only guest submissions"
+msgstr "Inclure uniquement les soumissions des invités"
+
+#: admin/em-options.php:935
+msgid "Include all"
+msgstr "Tout inclure"
+
+#: admin/em-options.php:934
+msgid "Do not include"
+msgstr "Ne pas inclure"
+
 #: admin/em-options.php:872 em-install.php:1072
 msgid "All Blogs"
 msgstr "Tous les sites"
@@ -33,7 +149,7 @@ msgstr "Essayer de nouveau (sur tous les sites)"
 
 #: admin/em-options.php:848
 msgid "Your last attempt to reset all blogs to a certain timezone did not complete successfully. You can attempt to reset only those blogs that weren't completed by selecting your desired timezone again and then %s from the dropdowns below"
-msgstr "Votre dernier essai pour changer tous vos sites vers un fuseau horaire n'a pas abouti.Vous pouvez essayer de modifier uniquement les sites sur lesquels cela a échoué en choisissant le fuseau horaire puis en %s dans la liste déroulante ci-dessous."
+msgstr "Votre dernier essai pour changer tous vos sites vers un fuseau horaire n’a pas abouti. Vous pouvez essayer de modifier uniquement les sites sur lesquels cela a échoué en choisissant le fuseau horaire puis en %s dans la liste déroulante ci-dessous."
 
 #: admin/em-options.php:305
 msgid "Event timezones on all blogs have been reset to %s."
@@ -41,7 +157,45 @@ msgstr "Le fuseau horaire des évènements de tous les sites a été fixé à %s
 
 #: admin/em-options.php:285
 msgid "The following blog timezones could not be successfully reset:"
-msgstr "Le fuseau horaire de ce site n'a pas pu être modifié&nbsp;:"
+msgstr "Le fuseau horaire de ce site n’a pas pu être modifié&nbsp;:"
+
+#: admin/em-data-privacy.php:392 admin/em-data-privacy.php:463
+msgid "Coordinates"
+msgstr "Coordonnées"
+
+#: admin/em-data-privacy.php:372 admin/em-data-privacy.php:395
+#: admin/em-data-privacy.php:460
+msgid "%s URL"
+msgstr "%s URL"
+
+#: admin/em-data-privacy.php:370 admin/em-data-privacy.php:393
+#: admin/em-data-privacy.php:458
+msgid "%s Status"
+msgstr "%s état"
+
+#: admin/em-data-privacy.php:227
+msgid "User"
+msgstr "Utilisateur"
+
+#: admin/em-data-privacy.php:187
+msgid "Further Information"
+msgstr "Autre information"
+
+#: admin/em-data-privacy.php:27
+msgid "We may use cookies to temporarily store information about a booking in progress as well as any error/confirmation messages whilst submitting or managing your events and locations."
+msgstr "Nous pouvons utiliser des cookies temporaires pour mémoriser des informations sur une réservation en cours comme sur des messages d’erreurs/confirmation pendant la soumission ou la gestion de vos évènements et de vos emplacements."
+
+#: admin/em-data-privacy.php:26
+msgid "We collect and store information you submit to us about events (and corresponding locations) you would like to publish on our site."
+msgstr "Nous recueillons et stockons des informations que vous nous fournissez sur les évènements (et les emplacements associés) que vous souhaitez publier sur notre site."
+
+#: admin/em-data-privacy.php:25
+msgid "We collect and store information you submit to us when making a booking, for the purpose of reserving your requested spaces at our event and maintaining a record of attendance."
+msgstr "Nous recueillons et stockons des informations que vous nous fournissez pour les réservations dans le but de traiter votre demande et de garder une trace de cette réservation. Ces informations servent aussi à la gestion à la bonne gestion de l’évènement."
+
+#: admin/em-data-privacy.php:22
+msgid "We use Google services to generate maps and provide autocompletion when searching for events by location, which may collect data via your browser in accordance to Google's <a href=\"%s\">privacy policy</a>."
+msgstr "Nous utilisons les services de Google pour créer les cartes et fournir des réponses lors de la recherche des évènements par emplacement. Ces services peuvent collecter des données en fonction de la <a href=\"%s\">politique de confidentialité</a> de Google."
 
 #: admin/em-data-privacy.php:379 templates/forms/event/recurring-when.php:18
 #: templates/forms/event/when-with-recurring.php:31

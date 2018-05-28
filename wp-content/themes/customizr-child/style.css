@@ -37,6 +37,8 @@
     position: fixed;
     width: 100%;
     height: auto;
+    top: 0;
+    left: 0;
 }
 
 
@@ -126,22 +128,34 @@ textarea.wpcf7-form-control.wpcf7-textarea.wpcf7-validates-as-required.czr-focus
     }
 
 
+a.inscription_event{
+    border: 1px solid #28998c;
+    background-color: #46cfc0;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 0px #aaa;
+}
 
 
 /* PROBLEME SUR =>
 
-La page d'un event en mobile/tablette on a une marge a droite cela vient de header
+WCAG 2.0 A => 
+4.1 Compatible: Maximize compatibility with current and future user agents, including assistive technologies.
 
-Page accueil avec le slider sur mobile on a un soucis
+Success Criteria 4.1.1 Parsing (A)
 
-Le header fait un mouvement bizarre en mobile et tablette
+Check 185: id attribute is not unique.
+Repair: Modify the id attribute value so it is unique.
+Error Line 223, Column 3:
+<body class="home page-template-default page page-id-22 czr-link-hover-underline header-skin-light f ...(primary-nav)
 
 
-Il manque a réaliser integrer tous le contenu.
 
-Voir si il y a des petites retouches a faire
+CSS =>
+Probléme de slider en vue mobile et tablette
+Faire un bouton inscription sur activités du mois
 
-Integrer => Le site doit avoir été optimisé pour le référencement naturel et doit suivre les bonnes pratiques d'accessibilité (WCAG 2.0 niveau A).
 
 
 */
