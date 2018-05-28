@@ -99,6 +99,9 @@ h1.archive-title{
     background-color: rgba(76, 207, 192, 0.3);
 }
 
+.em-booking-form-details{
+    display: none;
+}
 
 
 /* Contact textarea */
@@ -121,6 +124,7 @@ textarea.wpcf7-form-control.wpcf7-textarea.wpcf7-validates-as-required.czr-focus
        td{ display: flex; flex-direction: column; }
 
     }
+
 
 
 
