@@ -4,7 +4,7 @@
  * Description: The ultimate elements library for Elementor page builder plugin for WordPress.
  * Plugin URI: https://essential-addons.com/elementor/
  * Author: Codetic
- * Version: 2.7.0
+ * Version: 2.7.1
  * Author URI: https://www.codetic.net
  *
  * Text Domain: essential-addons-elementor
@@ -28,7 +28,7 @@ require_once ESSENTIAL_ADDONS_EL_PATH.'admin/settings.php';
  */
 function eael_activated_modules() {
 
-   $eael_default_keys = [ 'contact-form-7', 'count-down', 'creative-btn', 'fancy-text', 'img-comparison', 'instagram-gallery', 'interactive-promo',  'lightbox', 'post-block', 'post-grid', 'post-timeline', 'product-grid', 'team-members', 'testimonial-slider', 'testimonials', 'testimonials', 'weforms', 'static-product', 'call-to-action', 'flip-box', 'info-box', 'dual-header', 'price-table', 'flip-carousel', 'interactive-cards', 'ninja-form', 'gravity-form', 'caldera-form', 'wisdom_registered_setting', 'twitter-feed', 'facebook-feed', 'data-table', 'filter-gallery', 'img-accordion','content-ticker', 'tooltip', 'adv-accordion', 'adv-tabs' ];
+   $eael_default_keys = [ 'contact-form-7', 'count-down', 'creative-btn', 'fancy-text', 'img-comparison', 'instagram-gallery', 'interactive-promo',  'lightbox', 'post-block', 'post-grid', 'post-timeline', 'product-grid', 'team-members', 'testimonial-slider', 'testimonials', 'testimonials', 'weforms', 'static-product', 'call-to-action', 'flip-box', 'info-box', 'dual-header', 'price-table', 'flip-carousel', 'interactive-cards', 'ninja-form', 'gravity-form', 'caldera-form', 'wisdom_registered_setting', 'twitter-feed', 'facebook-feed', 'data-table', 'filter-gallery', 'image-accordion','content-ticker', 'tooltip', 'adv-accordion', 'adv-tabs' ];
 
    $eael_default_settings  = array_fill_keys( $eael_default_keys, true );
    $eael_get_settings      = get_option( 'eael_save_settings', $eael_default_settings );
@@ -154,6 +154,14 @@ function essential_addons_el_enqueue(){
    wp_enqueue_style('essential_addons_elementor-css',ESSENTIAL_ADDONS_EL_URL.'assets/css/essential-addons-elementor.css');
    wp_enqueue_style('essential_addons_elementor-slick-css',ESSENTIAL_ADDONS_EL_URL.'assets/slick/slick.css');
 
+    wp_enqueue_script('eael-scripts',ESSENTIAL_ADDONS_EL_URL.'assets/js/eael-scripts.js', array('jquery'),'1.0', true);
+    if ( class_exists( 'GFCommon' ) ) {
+        foreach( eael_select_gravity_form() as $form_id => $form_name ){
+            if ( $form_id != '0' ) {
+                gravity_form_enqueue_scripts( $form_id );
+            }
+        };
+    }
    if( $is_component_active['fancy-text'] ) {
       wp_enqueue_script('essential_addons_elementor-fancy-text-js',ESSENTIAL_ADDONS_EL_URL.'assets/js/fancy-text.js', array('jquery'),'1.0', true);
    }
@@ -186,7 +194,6 @@ function essential_addons_el_enqueue(){
 
 }
 add_action( 'wp_enqueue_scripts', 'essential_addons_el_enqueue' );
-
 
 /**
  * Editor Css
@@ -258,6 +265,52 @@ if( ! function_exists( 'essential_addons_elementor_lite_start_plugin_tracking' )
     essential_addons_elementor_lite_start_plugin_tracking();
 }
 
+
+function eael_init() {
+    if ( class_exists( 'Caldera_Forms' ) ) {
+        add_filter( 'caldera_forms_force_enqueue_styles_early', '__return_true' );
+    }
+   /**
+    * Check if Elementor is Installed or not
+    */
+   if( ! function_exists( 'eael_is_elementor_active' ) ) :
+      function eael_is_elementor_active() {
+         $file_path = 'elementor/elementor.php';
+         $installed_plugins = get_plugins();
+         return isset( $installed_plugins[$file_path] );
+      }
+   endif;
+
+   /**
+    * This notice will appear if Elementor is not installed or activated or both
+    */
+   function eael_is_failed_to_load() {
+      $elementor = 'elementor/elementor.php';
+      if( eael_is_elementor_active() ) {
+         if( ! current_user_can( 'activate_plugins' ) ) {
+            return;
+         }
+         $activation_url = wp_nonce_url( 'plugins.php?action=activate&amp;plugin=' . $elementor . '&amp;plugin_status=all&amp;paged=1&amp;s', 'activate-plugin_' . $elementor );
+         $message = __( '<strong>Essential Addons for Elementor</strong> requires <strong>Elementor</strong> plugin to be active. Please activate Elementor to continue.', 'essential-addons-elementor' );
+         $button_text = __( 'Activate Elementor', 'essential-addons-elementor' );
+      } else {
+         if( ! current_user_can( 'activate_plugins' ) ) {
+            return;
+         }
+         $activation_url = wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=elementor' ), 'install-plugin_elementor' );
+         $message = sprintf( __( '<strong>Essential Addons for Elementor</strong> requires <strong>Elementor</strong> plugin to be installed and activated. Please install Elementor to continue.', 'essential-addons-elementor' ), '<strong>', '</strong>' );
+         $button_text = __( 'Install Elementor', 'essential-addons-elementor' );
+      }
+      $button = '<p><a href="' . $activation_url . '" class="button-primary">' . $button_text . '</a></p>';
+      printf( '<div class="error"><p>%1$s</p>%2$s</div>', __( $message ), $button );
+   }
+
+   if( ! did_action( 'elementor/loaded' ) ) {
+      add_action( 'admin_notices', 'eael_is_failed_to_load' );
+   }
+}
+add_action( 'plugins_loaded', 'eael_init' );
+
 /**
  * Admin Notice
  *
@@ -292,43 +345,3 @@ function eael_nag_ignore() {
   }
 }
 add_action('admin_init', 'eael_nag_ignore');
-
-
-/**
- * Check if Elementor is Installed or not
- */
-if( ! function_exists( 'eael_is_elementor_active' ) ) :
-   function eael_is_elementor_active() {
-      $flie_path = 'elementor/elementor.php';
-      $installed_plugins = get_plugins();
-      return isset( $installed_plugins[$flie_path] );
-   }
-endif;
-
-/**
- * This notice will appear if Elementor is not installed or activated or both
- */
-function eael_is_failed_to_load() {
-   $elementor = 'elementor/elementor.php';
-   if( eael_is_elementor_active() ) {
-      if( ! current_user_can( 'activate_plugins' ) ) {
-         return;
-      }
-      $activation_url = wp_nonce_url( 'plugins.php?action=activate&amp;plugin=' . $elementor . '&amp;plugin_status=all&amp;paged=1&amp;s', 'activate-plugin_' . $elementor );
-      $message = __( 'Essential Addons Elementor requires Elementor plugin to be active. Please activate Elementor to continue.', 'essential-addons-elementor' );
-      $button_text = __( 'Activate Elementor', 'essential-addons-elementor' );
-   } else {
-      if( ! current_user_can( 'activate_plugins' ) ) {
-         return;
-      }
-      $activation_url = wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=elementor' ), 'install-plugin_elementor' );
-      $message = sprintf( __( 'Essentail Addons Elementor requires %1$s"Elementor"%2$s plugin to be installed and activated. Please install Elementor to continue.', 'essential-addons-elementor' ), '<strong>', '</strong>' );
-      $button_text = __( 'Install Elementor', 'essential-addons-elementor' );
-   }
-   $button = '<p><a href="' . $activation_url . '" class="button-primary">' . $button_text . '</a></p>';
-   printf( '<div class="error"><p>%1$s</p>%2$s</div>', esc_html( $message ), $button );
-}
-
-if( ! did_action( 'elementor/loaded' ) ) {
-   add_action( 'admin_notices', 'eael_is_failed_to_load' );
-}

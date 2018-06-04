@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Yoast SEO - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-05-16 13:23:27+0000\n"
+"PO-Revision-Date: 2018-05-31 09:53:48+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,30 @@ msgstr ""
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: fr\n"
 "Project-Id-Version: Plugins - Yoast SEO - Stable (latest release)\n"
+
+#. translators: %1$s expands to the link to the article, %2$s closes the link
+#. to the article
+#: admin/views/class-view-utils.php:87
+msgid ""
+"By enabling this option, attachment URLs become visible to both your visitors and Google.\n"
+"To add value to your website, they should contain useful information, or they might have a\n"
+"negative impact on your ranking. Please carefully consider this and %1$sread this post%2$s if\n"
+"you want more information about the impact of showing media in search results."
+msgstr ""
+"En activant cette option, les URL des fichiers joints sont visibles pour les internautes et Google.\n"
+"Pour apporter de la valeur ajoutée à votre site, ils devraient contenir des informations utiles.\n"
+"Dans le cas contraire, ils auront un impact négatif sur votre référencement. Veillez à bien réfléchir au sujet de cette option\n"
+"et consultez %1$scet article%2$s si vous souhaitez en apprendre plus."
+
+#: admin/class-admin-media-purge-notification.php:94
+msgid "If you know what this means and you do not want to see this message anymore, you can %1$sdismiss this message%2$s."
+msgstr "Si vous savez ce que cela signifie et que vous ne souhaitez plus voir ce message, vous pouvez %1$sle masquer%2$s."
+
+#. translators: %1$s expands to the link to the article, %2$s closes the link
+#. tag.
+#: admin/class-admin-media-purge-notification.php:87
+msgid "Your site's settings currently allow attachment URLs on your site to exist. Please read %1$sthis post about a potential issue%2$s with attachment URLs and check whether you have the correct setting for your site."
+msgstr "Vos réglages permettent aux URL des fichiers joints d’exister. Veuillez consulter %1$scet article au sujet du problème que cela peut poser%2$s et vérifiez vos réglages ensuite."
 
 #: admin/banner/class-admin-banner-sidebar.php:331
 msgid "Get the FREE SEO for beginners training course and learn the SEO basics to make your site rank higher."
@@ -1172,7 +1196,7 @@ msgstr "Vous ne recevez ni mises à jour, ni support ! Réglez ce problème en 
 msgid "Activate your site on My Yoast"
 msgstr "Activez votre site sur My Yoast"
 
-#: admin/class-admin.php:362 vendor/yoast/whip/src/facades/wordpress.php:29
+#: admin/class-admin.php:363 vendor/yoast/whip/src/facades/wordpress.php:29
 msgid "Remind me again in 4 weeks."
 msgstr "Me le rappeler dans 4 semaines."
 
@@ -1617,7 +1641,7 @@ msgstr "Variable"
 msgid "Available variables"
 msgstr "Variables disponibles"
 
-#: admin/class-admin.php:286
+#: admin/class-admin.php:287
 msgid "Scroll to see the table content."
 msgstr "Faire défiler pour voir le contenu du tableau."
 
@@ -1853,7 +1877,7 @@ msgstr[0] "Vous avez %d nouveau problème concernant votre SEO !"
 msgstr[1] "Vous avez %d nouveaux problèmes concernant votre SEO !"
 
 #. translators: 1: Author name; 2: Site name.
-#: inc/options/class-wpseo-option-titles.php:197
+#: inc/options/class-wpseo-option-titles.php:198
 msgid "%1$s, Author at %2$s"
 msgstr "%1$s, auteur sur %2$s"
 
@@ -2659,7 +2683,7 @@ msgstr "Ouvrez l’article de la base de connaissances dans une nouvelle fenêtr
 msgid "Search results"
 msgstr "Résultats de recherche"
 
-#: admin/class-admin.php:285
+#: admin/class-admin.php:286
 msgid "Yoast SEO video tutorial"
 msgstr "Tutoriel vidéo de Yoast SEO"
 
@@ -3180,11 +3204,11 @@ msgstr "Impossible d’activer votre licence, votre clé de licence semble inval
 msgid "You've reached your activation limit. You must <a href=\"%s\">upgrade your license</a> to use it on this site."
 msgstr "Vous avez atteint votre limite d’activation. Vous devez <a href=\"%s\">mettre à jour votre licence</a> pour l’utiliser sur ce site."
 
-#: inc/options/class-wpseo-option-titles.php:204
+#: inc/options/class-wpseo-option-titles.php:205
 msgid "Error 404: Page not found"
 msgstr "Erreur 404 : Page introuvable"
 
-#. #-#-#-#-#  wordpress-seo-code.pot (Yoast SEO 7.5.1)  #-#-#-#-#
+#. #-#-#-#-#  wordpress-seo-code.pot (Yoast SEO 7.5.3)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: admin/capabilities/class-capability-manager-integration.php:68
 msgid "Yoast SEO"
@@ -3293,24 +3317,24 @@ msgid "Good"
 msgstr "Bon"
 
 #. translators: %s expands to the name of a post type (plural).
-#: inc/options/class-wpseo-option-titles.php:249
+#: inc/options/class-wpseo-option-titles.php:250
 msgid "%s Archive"
 msgstr "%s Archive"
 
 #. translators: %s expands to the search phrase.
-#: inc/options/class-wpseo-option-titles.php:199
+#: inc/options/class-wpseo-option-titles.php:200
 msgid "You searched for %s"
 msgstr "Vous avez cherché %s"
 
-#: inc/options/class-wpseo-option-titles.php:207
+#: inc/options/class-wpseo-option-titles.php:208
 msgid "You searched for"
 msgstr "Vous avez cherché"
 
-#: inc/options/class-wpseo-option-titles.php:205
+#: inc/options/class-wpseo-option-titles.php:206
 msgid "Archives for"
 msgstr "Archives pour"
 
-#: inc/options/class-wpseo-option-titles.php:206
+#: inc/options/class-wpseo-option-titles.php:207
 msgid "Home"
 msgstr "Accueil"
 
@@ -3355,7 +3379,7 @@ msgid "Paste your %s license key here..."
 msgstr "Collez votre clé de licence pour %s ici."
 
 #. translators: 1: link to post; 2: link to blog.
-#: inc/options/class-wpseo-option-titles.php:202
+#: inc/options/class-wpseo-option-titles.php:203
 msgid "The post %1$s appeared first on %2$s."
 msgstr "L’article %1$s est apparu en premier sur %2$s."
 
@@ -3409,12 +3433,12 @@ msgid "As you can see, there is a translation of this plugin in %1$s. This trans
 msgstr "Comme vous le constatez, cette extension est traduite en %1$s. Cette traduction est actuellement terminée à %3$d%%. Nous avons besoin de votre aide pour la terminer et pour corriger les éventuelles erreurs. SVP, enregistrez-vous sur %4$s pour finaliser la traduction à %1$s !"
 
 #. translators: %s expands to a post type.
-#: inc/options/class-wpseo-option-titles.php:430
+#: inc/options/class-wpseo-option-titles.php:431
 msgid "Please select a valid taxonomy for post type \"%s\""
 msgstr "Veuillez choisir une taxonomie valide pour le type de contenu « %s »"
 
 #. translators: %s expands to a taxonomy slug.
-#: inc/options/class-wpseo-option-titles.php:467
+#: inc/options/class-wpseo-option-titles.php:468
 msgid "Please select a valid post type for taxonomy \"%s\""
 msgstr "Veuillez choisir un type de contenu valide pour la taxonomie « %s »"
 
@@ -3495,7 +3519,7 @@ msgid "Replaced with a posts custom taxonomies, comma separated."
 msgstr "Remplacé par la(les) catégorie(s) de l’article, séparé par des virgules"
 
 #: frontend/class-frontend.php:539
-#: inc/options/class-wpseo-option-titles.php:200
+#: inc/options/class-wpseo-option-titles.php:201
 msgid "Page not found"
 msgstr "Page non trouvée"
 
@@ -3726,7 +3750,7 @@ msgstr "Remplacé par une valeur de champ personnalisé"
 #. translators: %s expands to the variable used for term title.
 #: frontend/class-frontend.php:516 frontend/class-frontend.php:520
 #: frontend/class-frontend.php:524
-#: inc/options/class-wpseo-option-titles.php:265
+#: inc/options/class-wpseo-option-titles.php:266
 msgid "%s Archives"
 msgstr "%s Archives"
 
@@ -3999,7 +4023,7 @@ msgstr "indésirable"
 msgid "%s restored to default SEO settings."
 msgstr "%s a été rétabli aux réglages SEO par défaut."
 
-#: admin/views/class-view-utils.php:96
+#: admin/views/class-view-utils.php:114
 msgid "Date in Snippet Preview"
 msgstr "Date dans la prévisualisation de l’extrait"
 
@@ -4289,7 +4313,7 @@ msgstr "Logo de la société"
 msgid "Company name"
 msgstr "Nom de la société"
 
-#: admin/views/class-view-utils.php:90 admin/views/tabs/metas/archives.php:91
+#: admin/views/class-view-utils.php:108 admin/views/tabs/metas/archives.php:91
 #: admin/views/tabs/metas/archives.php:123
 #: admin/views/tabs/metas/taxonomies.php:48
 msgid "Meta description template"
@@ -4327,12 +4351,12 @@ msgid "This data is shown as metadata in your site. It is intended to appear in 
 msgstr "Cette donnée est affichée comme une métadonnée dans votre site. Elle apparaît dans le %1$sKnowledge Graph de Google%2$s. Vous pouvez être une société ou une personne."
 
 #. translators: %1$s expands to Yoast SEO
-#: admin/views/class-view-utils.php:102
+#: admin/views/class-view-utils.php:120
 #: admin/views/tabs/metas/taxonomies.php:51
 msgid "%1$s Meta Box"
 msgstr "Encarts de métadonnées de %1$s"
 
-#: admin/views/class-view-utils.php:84 admin/views/tabs/metas/archives.php:90
+#: admin/views/class-view-utils.php:102 admin/views/tabs/metas/archives.php:90
 #: admin/views/tabs/metas/archives.php:122
 #: admin/views/tabs/metas/archives.php:143
 #: admin/views/tabs/metas/archives.php:146
@@ -4769,7 +4793,7 @@ msgstr "Vous n’êtes pas autorisé à accéder à cette page."
 msgid "No Image Index"
 msgstr "Pas d’index pour l’image"
 
-#: admin/class-admin.php:559 admin/class-admin.php:560 admin/pages/metas.php:76
+#: admin/class-admin.php:560 admin/class-admin.php:561 admin/pages/metas.php:76
 msgid "Advanced Variables"
 msgstr "Variables avancées"
 
@@ -4798,7 +4822,7 @@ msgstr[1] "Tous <span class=\"count\">(%s)</span>"
 msgid "Post doesn't exist."
 msgstr "L’article n’existe pas."
 
-#: admin/class-admin.php:531
+#: admin/class-admin.php:532
 msgid "Why Google won't display the right page title"
 msgstr "Pourquoi Google n’affichera pas le bon titre de la page"
 
@@ -4807,11 +4831,11 @@ msgstr "Pourquoi Google n’affichera pas le bon titre de la page"
 msgid "Use Image"
 msgstr "Utiliser l’image"
 
-#: admin/class-admin.php:529
+#: admin/class-admin.php:530
 msgid "For more information:"
 msgstr "Pour plus d’information&nbsp;:"
 
-#: admin/class-admin.php:530
+#: admin/class-admin.php:531
 msgid "Title optimization"
 msgstr "Optimisation d’un titre"
 
@@ -4877,7 +4901,7 @@ msgstr "%1$s a détecté que vous utiliser la version de %2$s de %3$s. Veuillez 
 msgid "You still have the default WordPress tagline, even an empty one is probably better. %1$sYou can fix this in the customizer%2$s."
 msgstr "Vous utilisez toujours le slogan par défaut de WordPress, un vide serait même plus efficace. %1$sVous pouvez régler cela dans la personnalisation%2$s."
 
-#: admin/class-admin.php:544 admin/pages/metas.php:65
+#: admin/class-admin.php:545 admin/pages/metas.php:65
 msgid "Note that not all variables can be used in every template."
 msgstr "Veuillez noter que toutes les variables ne peuvent pas être utilisées dans tous les modèles."
 
@@ -4901,7 +4925,7 @@ msgstr "Votre valeur inclut du code HTML non autorisé."
 msgid "Publication date"
 msgstr "Date de Publication"
 
-#: admin/class-admin.php:216
+#: admin/class-admin.php:217
 msgid "Premium Support"
 msgstr "Support Premium"
 
@@ -4963,7 +4987,7 @@ msgid "Filter"
 msgstr "Filtrer"
 
 #. translators: %1$s expands to Yoast SEO.
-#: admin/class-admin.php:541
+#: admin/class-admin.php:542
 msgid "The title &amp; metas settings for %1$s are made up of variables that are replaced by specific values from the page when the page is displayed. The tabs on the left explain the available variables."
 msgstr "Les réglages des titres & métas pour %1$s utilisent des variables qui sont remplacées par des valeurs spécifiques de la page quand la page est affichée. Les onglets de gauche donnent des explications sur les variables disponibles."
 
@@ -4983,16 +5007,16 @@ msgstr "Vous ne pouvez pas modifier les %s qui ne sont pas à/de vous."
 msgid "You can't edit %s."
 msgstr "Vous ne pouvez pas modifier %s."
 
-#: admin/class-admin.php:551 admin/class-admin.php:552 admin/pages/metas.php:70
+#: admin/class-admin.php:552 admin/class-admin.php:553 admin/pages/metas.php:70
 msgid "Basic Variables"
 msgstr "Variables de base"
 
-#: admin/class-admin.php:537 admin/class-admin.php:538 admin/pages/metas.php:42
+#: admin/class-admin.php:538 admin/class-admin.php:539 admin/pages/metas.php:42
 #: admin/pages/metas.php:63
 msgid "Template explanation"
 msgstr "Explication des modèles"
 
-#: admin/class-admin.php:166
+#: admin/class-admin.php:167
 msgid "Posts"
 msgstr "Articles"
 
@@ -5001,15 +5025,15 @@ msgstr "Articles"
 msgid "Edit Files"
 msgstr "Modifier les fichiers"
 
-#: admin/class-admin.php:259
+#: admin/class-admin.php:260
 msgid "Facebook profile URL"
 msgstr "URL du profil Facebook"
 
-#: admin/class-admin.php:255 admin/pages/social.php:22
+#: admin/class-admin.php:256 admin/pages/social.php:22
 msgid "Google+"
 msgstr "Google+"
 
-#: admin/class-admin.php:257
+#: admin/class-admin.php:258
 msgid "Twitter username (without @)"
 msgstr "Identifiant Twitter (sans le @)"
 
@@ -5051,7 +5075,7 @@ msgstr "Méta robots avancés"
 msgid "SEO Title"
 msgstr "Titre SEO&nbsp;"
 
-#: admin/class-admin.php:202
+#: admin/class-admin.php:203
 #: admin/google_search_console/class-gsc-platform-tabs.php:42
 #: admin/taxonomy/class-taxonomy-metabox.php:163
 #: admin/taxonomy/class-taxonomy-metabox.php:171
@@ -5090,7 +5114,7 @@ msgstr "Aperçu de l’extrait"
 msgid "The canonical URL that this page should point to, leave empty to default to permalink. %1$sCross domain canonical%2$s supported too."
 msgstr "L’URL canonique qui devrait pointer sur cette page, laissez cette case vide pour utiliser le permalien par défaut. Les %1$sURL canoniques vers d’autres domaines%2$s sont aussi supportées."
 
-#: admin/class-admin.php:220
+#: admin/class-admin.php:221
 msgid "FAQ"
 msgstr "FAQ"
 

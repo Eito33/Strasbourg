@@ -1,13 +1,13 @@
 === Elementor Essential Addons ===
-Contributors: Codetic, re_enter_rupok, Asif2BD, robicse11128
+Contributors: Codetic, re_enter_rupok, Asif2BD
 Tags: elementor, elements, addons, elementor addon, elementor widget, page builder, builder, visual editor, wordpress page builder, elementor form
 Requires at least: 4.0
 Tested up to: 4.9.6
-Stable tag: 2.7.0
+Stable tag: 2.7.1
 License: GPLv3
 License URI: https://opensource.org/licenses/GPL-3.0
 
-Ultimate elements library for Elementor WordPress Page Builder. Premium elements with endless customization options.
+Ultimate elements library for Elementor WordPress Page Builder. 44+ Premium elements with endless customization options.
 
 == Description ==
 
@@ -129,6 +129,19 @@ Your existing elements/content will work with premium version. So you won't lose
 
 
 == Changelog ==
+
+= 2.7.1 =
+
+- "On Sale Price" option added to Pricing Table element
+- Testimonial avatar display issue fixed
+- Advanced Tabs improved with custom icon option
+- Contact Form 7 updated
+- Ninja updated
+- Gravity updated
+- Caldera updated
+- Post Grid load more button position fixed
+- Filterable Gallery improved with less script dependency
+- Few minor bugfix and improvements
 
 = 2.7.0 =
 

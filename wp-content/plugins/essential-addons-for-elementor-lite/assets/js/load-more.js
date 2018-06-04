@@ -47,11 +47,13 @@
 					createPostHtml( res );
 					if( optionsValue.postStyle === 'grid' ) {
 						$( '.eael-post-grid' ).masonry( 'destroy' );
-						$('.eael-post-grid').masonry({
-					      itemSelector: '.eael-grid-post',
-					      percentPosition: true,
-					      columnWidth: '.eael-post-grid-column'
-					    });
+						setTimeout(function() {
+							$('.eael-post-grid').masonry({
+						    	itemSelector: '.eael-grid-post',
+						    	percentPosition: true,
+						    	columnWidth: '.eael-post-grid-column'
+						    });
+						}, 100);
 					}
 					optionsValue.loadMoreBtn.removeClass( 'button--loading' );
 					optionsValue.loadMoreBtn.find( 'span' ).html( settingsValue.btnText );
