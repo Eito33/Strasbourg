@@ -1,13 +1,16 @@
 <?php
 namespace czr_fn;
 
-if ( isset( $GLOBALS['czr_base_fmk_namespace'] ) ) {
-    error_log(' => ' . __FILE__ . ' The czr_base_fmk has already been loaded');
+if ( did_action('nimble_base_fmk_loaded') ) {
+    error_log( __FILE__ . '  => The czr_base_fmk has already been loaded' );
     return;
 }
-// Set the namsepace as a global so we know its already loaded
+
+// Set the namsepace as a global so we can use it when fired from another theme/plugin using the fmk
 global $czr_base_fmk_namespace;
 $czr_base_fmk_namespace = __NAMESPACE__ . '\\';
+
+do_action( 'nimble_base_fmk_loaded' );
 ////////////////////////////////////////////////////////////////
 // CZR_Fmk_Base
 if ( ! class_exists( 'CZR_Fmk_Base_Construct' ) ) :
@@ -568,7 +571,10 @@ if ( ! class_exists( 'CZR_Fmk_Base_Tmpl_Builder' ) ) :
 
                 'refresh-markup' => null,
                 'refresh-stylesheet' => null,
-                'refresh-fonts' => null
+                'refresh-fonts' => null,
+
+                'sanitize_cb' => '',
+                'validate_cb' => ''
             );
             foreach( $tmpl_map as $input_id => $input_data ) {
                 if ( ! is_string( $input_id ) || empty( $input_id ) ) {

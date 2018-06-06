@@ -31,6 +31,7 @@ if ( apply_filters( 'czr_ms', false ) ) {
 		//the '__before_body' hook is used by CZR_header_main::$instance->czr_fn_head_display()
 		do_action( '__before_body' );
 	?>
+
 	<body <?php body_class(); ?> <?php echo apply_filters('tc_body_attributes' , '') ?>>
 
     <?php do_action( '__before_page_wrapper' ); ?>

@@ -42,7 +42,7 @@
 }
 
 .logged-in header {
-    padding-top 32px !important;
+    padding-top: 32px;
 }
     
 
@@ -51,6 +51,7 @@ a.nav__link{
     font-size: 0.8em;
     letter-spacing: 0;
 }
+
 a.nav__link:hover{
     color: #45cdbe !important;
 }
@@ -64,6 +65,11 @@ a.search-toggle_btn.icn-search.czr-overlay-toggle_btn{
 a.navbar-brand-sitename.czr-underline{
     color: #45cdbe;
 }
+
+
+
+
+
 
 
 /**** CONTAINER MARKETING ****/
@@ -82,6 +88,9 @@ h4.fp-title{
     color: #45cdbe; 
 }
 
+p.czr-credits{
+    display: none;
+}
 
 
 /**** ALL PAGE ***/
@@ -105,6 +114,15 @@ h1.archive-title{
     background-color: rgba(76, 207, 192, 0.3);
 }
 
+a.inscription_event{
+    border: 1px solid #28998c;
+    background-color: #46cfc0;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 0px #aaa;
+}
+
 p.czr-focus{
     display: none;
 }
@@ -114,9 +132,11 @@ p.czr-focus{
 label{
     width: 100%;
 }
+
 textarea.wpcf7-form-control.wpcf7-textarea.wpcf7-validates-as-required.czr-focusable{
     width: 100%;
 }
+
 
 /* Seo */
 li#wp-admin-bar-wpseo-menu, li#wp-admin-bar-edit{
@@ -124,8 +144,56 @@ li#wp-admin-bar-wpseo-menu, li#wp-admin-bar-edit{
 }
 
 
+/* METEO */
+.infos{
+    display: none;
+}
+
+
+/**** SLIDER ****/
+div#customizr-slider-main_slider{
+	min-height: 800px;
+}
+
+
+
+/* ANIMATION LOGO */
+@-webkit-keyframes animationlogo {
+    0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+    10% {-webkit-transform: rotate(36deg);transform: rotate(36deg);}
+    20% {-webkit-transform: rotate(72deg);transform: rotate(72deg);}
+    30% {-webkit-transform: rotate(108deg);transform: rotate(108deg);}
+    40% {-webkit-transform: rotate(144deg);transform: rotate(144deg);}
+    50% {-webkit-transform: rotate(180deg);transform: rotate(180deg);}
+    60% {-webkit-transform: rotate(216deg);transform: rotate(216deg);}
+    70% {-webkit-transform: rotate(252deg);transform: rotate(252deg);}
+    80% {-webkit-transform: rotate(288deg);transform: rotate(288deg);}
+    90% {-webkit-transform: rotate(324deg);transform: rotate(324deg);}
+    100% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
+}
+@keyframes animationlogo {
+    0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+    10% {-webkit-transform: rotate(36deg);transform: rotate(36deg);}
+    20% {-webkit-transform: rotate(72deg);transform: rotate(72deg);}
+    30% {-webkit-transform: rotate(108deg);transform: rotate(108deg);}
+    40% {-webkit-transform: rotate(144deg);transform: rotate(144deg);}
+    50% {-webkit-transform: rotate(180deg);transform: rotate(180deg);}
+    60% {-webkit-transform: rotate(216deg);transform: rotate(216deg);}
+    70% {-webkit-transform: rotate(252deg);transform: rotate(252deg);}
+    80% {-webkit-transform: rotate(288deg);transform: rotate(288deg);}
+    90% {-webkit-transform: rotate(324deg);transform: rotate(324deg);}
+    100% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
+}
+
+.branding.align-items-center.flex-row.tagline-aside:hover{
+    animation: animationlogo 2s;
+}
+
+
+
+
 /**** MOBILE ****/
-@media screen and (max-device-width: 425px)
+@media screen and (max-width: 425px)
     {
         /**** EVENT MANAGER ****/
        th{ display: none; }
@@ -137,40 +205,21 @@ li#wp-admin-bar-wpseo-menu, li#wp-admin-bar-edit{
 			min-height: 400px;
 		}
         
+        /* WP ADMIN BAR */
+        ul#wp-admin-bar-top-secondary{
+            display:none !important;
+        }
+        
+        #wpadminbar #wp-admin-bar-wpseo-menu{
+            display: none !important;
+        }
+                
+        
     }
 
 
-a.inscription_event{
-    border: 1px solid #28998c;
-    background-color: #46cfc0;
-    color: white;
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0px 2px 0px #aaa;
-}
 
 
 
 
 
-/* PROBLEME SUR =>
-
-WCAG 2.0 A => 
-4.1 Compatible: Maximize compatibility with current and future user agents, including assistive technologies.
-
-Success Criteria 4.1.1 Parsing (A)
-
-Check 185: id attribute is not unique.
-Repair: Modify the id attribute value so it is unique.
-Error Line 223, Column 3:
-<body class="home page-template-default page page-id-22 czr-link-hover-underline header-skin-light f ...(primary-nav)
-
-
-
-CSS =>
-Probléme de slider en vue mobile et tablette
-Faire un bouton inscription sur activités du mois
-
-
-
-*/
